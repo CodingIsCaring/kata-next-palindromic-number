@@ -15,13 +15,8 @@ class Palindromic {
             if (!areDigitsEquals(value, start, end)) {
                 return false
             }
-            if (canCheckNextDigits(start, end)) {
-                return isPalindromic(value, start + 1, end - 1)
-            }
-            return true
+            return isPalindromic(value, start + 1, end - 1)
         }
-
-        private fun canCheckNextDigits(start: Int, end: Int) = (start + 1) < (end - 1)
 
         private fun areDigitsEquals(value: String, start: Int, end: Int) = value[start] == value[end]
 
